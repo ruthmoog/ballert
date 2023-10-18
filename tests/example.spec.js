@@ -11,6 +11,6 @@ test('check for sold out items', async ({ page }) => {
   const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
 
   // Expects page to have three Sold out items.
-  // If there are not 3 sold out items, there may be returns for sale!
-  await expect(soldOutItems).toHaveCount(3);
+  // If there are not 4 sold out items, there may be returns for sale!
+  await expect(soldOutItems).toHaveCount(4);
 });
