@@ -1,8 +1,8 @@
 name: Playwright Tests
 on:
-  # schedule:
-  #   # * is a special character in YAML so you have to quote this string
-  #   - cron:  '4 9,12,17 * * *'
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '4 9,12,17 * * *'
   push:
     branches: [ main, master ]
   pull_request:
