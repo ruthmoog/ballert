@@ -27,5 +27,6 @@ test('check for bod discounts', async ({page}) => {
   await page.goto('https://www.knightsportswear.com/collections/bowmen-of-darentford/products/bowmen-of-darenteford-white-tech-polo-right');
 
   // If the price has changed, it might be on sale!
-  await expect(page.getByText('£34.95')).toBeVisible();
+  const price = await page.getByRole('heading', { name: '£34.95' });
+  await expect(price).toHaveCount(1);
 });
