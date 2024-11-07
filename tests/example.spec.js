@@ -12,17 +12,6 @@ test('check for Izumis Friday classes', async ({ page }) => {
   await expect(soldOutItems).toHaveCount(4);
 });
 
-// test('check for Mazs Family Sunday', async ({ page }) => {
-//   await page.goto('https://www.roh.org.uk/tickets-and-events/family-sundays-dates?start-date=26-05-24&end-date=26-05-24&event-time=afternoon');
-
-//   // Check we're on the right page
-//   await expect(page).toHaveTitle(/Family Sundays/);
-  
-//     // If there are no sold out items, there may be returns for sale!
-//   const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
-//   await expect(soldOutItems).toHaveCount(1);
-// });
-
 // test('check for bod discounts', async ({page}) => {
 //   await page.goto('https://www.knightsportswear.com/collections/bowmen-of-darentford/products/bowmen-of-darenteford-white-tech-polo-right');
 
