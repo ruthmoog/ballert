@@ -2,14 +2,14 @@
 const { test, expect } = require('@playwright/test');
 
 test('check for Izumis Friday classes', async ({ page }) => {
-  await page.goto('https://www.rbo.org.uk/tickets-and-events/dance-with-the-royal-ballet-details');
+  await page.goto('https://www.rbo.org.uk/tickets-and-events/dance-with-the-royal-ballet-dates?start-date=18-01-25&end-date=31-10-25');
 
   // Check we're on the right page
   await expect(page).toHaveTitle(/Dance with The Royal Ballet/);
 
   // If there are not 4 sold out items, there may be returns for sale or new dates!
   const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
-  await expect(soldOutItems).toHaveCount(4);
+  await expect(soldOutItems).toHaveCount(3);
 });
 
 
