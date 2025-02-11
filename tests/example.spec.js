@@ -7,9 +7,9 @@ test('check for Izumis Friday classes', async ({ page }) => {
   // Check we're on the right page
   await expect(page).toHaveTitle(/Dance with The Royal Ballet/);
 
-  // If there are not 3 sold out items, there may be returns for sale or new dates!
+  // If there are not x sold out items, there may be returns for sale or new dates!
   const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
-  await expect(soldOutItems).toHaveCount(3);
+  await expect(soldOutItems).toHaveCount(2);
 });
 
 
