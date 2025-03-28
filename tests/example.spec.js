@@ -9,7 +9,7 @@ test('check for Izumis Friday classes', async ({ page }) => {
 
   // If there are not x sold out items, there may be returns for sale or new dates!
   const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
-  await expect(soldOutItems).toHaveCount(2);
+  await expect(soldOutItems).toHaveCount(3);
 });
 
 
