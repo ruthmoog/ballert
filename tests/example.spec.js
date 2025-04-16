@@ -13,16 +13,16 @@ test('check for Izumis Friday classes', async ({ page }) => {
 });
 
 
-test('check for family Sunday', async ({ page }) => {
-  await page.goto('https://www.rbo.org.uk/tickets-and-events/family-sundays-dates?start-date=27-04-25&end-date=27-04-25&event-time=morning');
+// test('check for family Sunday', async ({ page }) => {
+//   await page.goto('https://www.rbo.org.uk/tickets-and-events/family-sundays-dates?start-date=27-04-25&end-date=27-04-25&event-time=morning');
 
-  // Check we're on the right page
-  await expect(page).toHaveTitle(/Family Sundays/);
+//   // Check we're on the right page
+//   await expect(page).toHaveTitle(/Family Sundays/);
 
-  // If there are not 1 sold out item, there may be returns for sale!
-  const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
-  await expect(soldOutItems).toHaveCount(1);
-});
+//   // If there are not 1 sold out item, there may be returns for sale!
+//   const soldOutItems = await page.getByRole('heading', { name: 'Sold out' });
+//   await expect(soldOutItems).toHaveCount(1);
+// });
 
 
 // test('check for bod discounts', async ({page}) => {
